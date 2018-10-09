@@ -15,9 +15,9 @@ services:
             connector: postgres
             host: ec2-23-23-253-106.compute-1.amazonaws.com
             port: '5432'
-            database: d9qou38i9nmchr
-            user: snvpgduqiwoqpt
-            password: eb2473c0b698f3dcd188eacc99e150b2d83d011bfa525efd87eefaac623d8d39
+            database: 
+            user: 
+            password: 
             migrations: true
             rawAccess: true
             ssl: true
