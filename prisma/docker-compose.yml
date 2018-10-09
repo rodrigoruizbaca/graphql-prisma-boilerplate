@@ -12,12 +12,17 @@ services:
         # managementApiSecret: my-secret
         databases:
           default:
-            connector: postgres
-            host: ec2-23-23-253-106.compute-1.amazonaws.com
-            port: '5432'
-            database: 
-            user: 
-            password: 
-            migrations: true
-            rawAccess: true
-            ssl: true
+                connector: mongo
+                migrations: true
+                host: mongo
+                port: 27017
+                user: prisma
+                password: prisma
+  mongo:
+    image: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: prisma
+      MONGO_INITDB_ROOT_PASSWORD: prisma
+    ports:
+      - "27017:27017"
